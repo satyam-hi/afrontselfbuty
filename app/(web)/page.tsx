@@ -1,65 +1,50 @@
-import Link from "next/link";
-import  Footer from "@/app/component/web/footer"
 
+import Link from "next/link";
+import Footer from "@/app/component/web/footer";
 
 export default function HomePage() {
   const features = [
     {
-      icon: "🛒",
-      title: "Self Ordering Kiosk",
-      desc: "Customers can place orders directly from the mobile  or kiosk screens themselves.",
+      icon: "💇",
+      title: "Self Booking Kiosk",
+      desc: "Clients can book beauty and salon services directly from kiosk or mobile screens.",
     },
     {
       icon: "📱",
-      title: "QR Table Ordering",
-      desc: "Scan QR from table and order instantly.",
+      title: "QR Appointment Booking",
+      desc: "Scan QR and book salon services instantly.",
     },
     {
       icon: "💳",
       title: "Online & Offline Payments",
-      desc: "Accept UPI, cards, wallets and cash payments.",
+      desc: "Accept UPI, cards, wallets and cash payments easily.",
     },
     {
-      icon: "🍽️",
-      title: "Dine In & Packaging",
-      desc: "Support dine-in, takeaway and packing orders.",
+      icon: "💄",
+      title: "Salon & Spa Services",
+      desc: "Manage beauty, spa, haircut, makeup and grooming services.",
     },
     {
       icon: "📊",
       title: "Analytics Dashboard",
-      desc: "Track sales, revenue and top-selling products.",
+      desc: "Track appointments, earnings and top-selling services.",
     },
     {
-      icon: "🏨",
-      title: "Multi Restaurant Support",
-      desc: "Restaurants and hotels can register and manage.",
+      icon: "🏬",
+      title: "Multi Salon Support",
+      desc: "Beauty salons and spa centers can register and manage branches.",
     },
   ];
 
-  // const pricing = [
-  //   {
-  //     name: "Starter",
-  //     price: "₹29",
-  //   },
-  //   {
-  //     name: "Business",
-  //     price: "₹79",
-  //   },
-  //   {
-  //     name: "Enterprise",
-  //     price: "₹199",
-  //   },
-  // ];
-    const pricing = [
+  const pricing = [
     {
-      name: "Only offline",
-      price: "free",
+      name: "Only Offline",
+      price: "Free",
     },
     {
-      name: "Online with offline",
-      price: "4% of total order amount",
+      name: "Online with Offline",
+      price: "4% of total booking amount",
     },
-
   ];
 
   return (
@@ -76,42 +61,43 @@ export default function HomePage() {
           <div className="animate-fadeIn">
 
             <div className="inline-block px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-300 mb-6 mt-4">
-              Smart Restaurant SaaS Platform
+              Smart Beauty & Salon SaaS Platform
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-black leading-tight">
-              Smart Self Ordering
-              <span className="text-orange-500"> Kiosk System </span>
-              For Restaurants & Hotels
+              Smart Beauty & Salon
+              <span className="text-orange-500"> Management System </span>
+              For Salons & Spas
             </h1>
 
             <p className="mt-8 text-gray-300 text-xl leading-relaxed max-w-xl">
-              Manage orders, products, tables, payments and restaurant earnings
-              from one modern platform. Perfect for restaurants, cafés, hotels
-              and food courts.
+              Manage appointments, beauty services, staff, payments and salon earnings
+              from one modern platform. Perfect for beauty salons, spas,
+              makeup studios and grooming centers.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-10">
+
               <button className="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg shadow-orange-500/30">
-                {/* Start Free Trial */}
-                Start 
+                Start
               </button>
 
               <button className="border border-white/20 hover:bg-white/10 transition px-8 py-4 rounded-2xl font-semibold text-lg">
                 Live Demo
               </button>
+
             </div>
 
             <div className="grid grid-cols-3 gap-6 mt-12">
 
               <div>
                 <h2 className="text-3xl font-bold text-orange-400">500+</h2>
-                <p className="text-gray-400">Restaurants</p>
+                <p className="text-gray-400">Salons</p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-orange-400">20K+</h2>
-                <p className="text-gray-400">Daily Orders</p>
+                <h2 className="text-3xl font-bold text-orange-400">10K+</h2>
+                <p className="text-gray-400">Appointments</p>
               </div>
 
               <div>
@@ -129,39 +115,42 @@ export default function HomePage() {
             <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-[32px] p-8 shadow-2xl">
 
               <div className="flex justify-between items-center mb-8">
+
                 <div>
-                  <p className="text-gray-400">Restaurant Dashboard</p>
+                  <p className="text-gray-400">Salon Dashboard</p>
+
                   <h3 className="text-2xl font-bold mt-2">
-                    Royal Food Plaza
+                    Royal Beauty Lounge
                   </h3>
                 </div>
 
                 <div className="w-14 h-14 rounded-2xl bg-orange-500 flex items-center justify-center text-2xl">
-                  🍔
+                  💇
                 </div>
+
               </div>
 
               <div className="grid grid-cols-2 gap-5">
 
                 <div className="bg-black/30 rounded-2xl p-5">
-                  <p className="text-gray-400">Orders</p>
-                  <h2 className="text-4xl font-bold mt-3">248</h2>
+                  <p className="text-gray-400">Appointments</p>
+                  <h2 className="text-4xl font-bold mt-3">148</h2>
                 </div>
 
                 <div className="bg-black/30 rounded-2xl p-5">
                   <p className="text-gray-400">Revenue</p>
-                  <h2 className="text-4xl font-bold mt-3">₹3420</h2>
+                  <h2 className="text-4xl font-bold mt-3">₹5420</h2>
                 </div>
 
                 <div className="bg-black/30 rounded-2xl p-5 col-span-2">
 
                   <div className="flex justify-between mb-3">
-                    <span>Dine In Orders</span>
-                    <span>68%</span>
+                    <span>Beauty Services</span>
+                    <span>72%</span>
                   </div>
 
                   <div className="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                    <div className="bg-orange-500 h-4 w-[68%] rounded-full"></div>
+                    <div className="bg-orange-500 h-4 w-[72%] rounded-full"></div>
                   </div>
 
                 </div>
@@ -169,17 +158,19 @@ export default function HomePage() {
               </div>
 
               <div className="mt-6 bg-orange-500 rounded-2xl p-5 flex items-center gap-4">
+
                 <div className="text-3xl">⚡</div>
 
                 <div>
                   <h4 className="font-bold text-lg">
-                    Live Order Processing
+                    Live Appointment Updates
                   </h4>
 
                   <p className="text-sm opacity-90">
-                    Kitchen and cashier synced instantly
+                    Staff and reception synced instantly
                   </p>
                 </div>
+
               </div>
 
             </div>
@@ -202,7 +193,7 @@ export default function HomePage() {
             </h2>
 
             <p className="text-gray-400 mt-6 text-xl">
-              Everything needed to run modern restaurants
+              Everything needed to run modern salons & spas
             </p>
 
           </div>
@@ -252,13 +243,13 @@ export default function HomePage() {
           <div className="space-y-8">
 
             {[
-              "Restaurant registers on the platform",
-              "Add tables, menu and products",
-              "Customers order from kiosk or QR or directly from the mobile",
-              "Kitchen receives orders instantly",
+              "Salon registers on the platform",
+              "Add services, staff and pricing",
+              "Clients book appointments from kiosk, QR or mobile",
+              "Staff receives bookings instantly",
               "Payments processed online/offline",
               "Track earnings and analytics",
-              "Customers can instantly view their order details and order status",
+              "Clients can instantly view booking details and appointment status",
             ].map((step, i) => (
 
               <div
@@ -317,11 +308,10 @@ export default function HomePage() {
                 </div>
 
                 <ul className="space-y-4 mt-10 text-lg">
-                  <li>✔ Unlimited Orders</li>
-                  <li>✔ QR Ordering</li>
+                  <li>✔ Unlimited Appointments</li>
+                  <li>✔ QR Booking</li>
                   <li>✔ Analytics Dashboard</li>
-                  {/* <li>✔ Online Payments</li> */}
-                  <li>✔  Payments</li>
+                  <li>✔ Payments</li>
                 </ul>
 
                 <button className="mt-10 w-full bg-black text-white py-4 rounded-2xl font-bold text-lg hover:bg-gray-900 transition">
@@ -344,11 +334,11 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto text-center bg-gradient-to-r from-orange-500 to-red-500 rounded-[40px] p-16">
 
           <h2 className="text-5xl font-black leading-tight">
-            Ready To Transform Your Restaurant?
+            Ready To Transform Your Salon Business?
           </h2>
 
           <p className="mt-6 text-xl text-white/90">
-            Launch your self-ordering restaurant platform today.
+            Launch your smart salon management platform today.
           </p>
 
           <button className="mt-10 bg-black hover:bg-gray-900 transition px-10 py-5 rounded-2xl text-xl font-bold">
@@ -359,138 +349,9 @@ export default function HomePage() {
 
       </section>
 
-      
       {/* FOOTER */}
-
       <Footer />
-
-
-
-      {/* <footer className="border-t border-white/10 py-10 px-6">
-
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
-
-          <div>
-            <h3 className="text-3xl font-black text-orange-500">
-              KioskCloud
-            </h3>
-
-            <p className="text-gray-400 mt-3">
-              Smart restaurant ordering SaaS platform.
-            </p>
-              <Link href="/">Home</Link>
-              <Link href="/about">About</Link>
-               <Link href="/privacy-policy">Privacy Policy</Link>
-              <Link href="/terms-and-conditions">Terms & Conditions</Link>
-              <Link href="/refund-policy">Refund Policy</Link>
-              <Link href="/shipping-policy">Shipping Policy</Link>
-              <Link href="/support">Support</Link>
-              <Link href="/contact">Contact</Link>
-            </div>
-
-          <div className="text-gray-400">
-            © 2026 KioskCloud. All rights reserved.
-          </div>
-
-
-        </div>
-
-      </footer> */}
-      {/* FOOTER */}
-   
 
     </main>
   );
 }
-
-
-// import Link from "next/link"
-
-
-// export default function WebHome() {
-//   return (
-
-//     <main className="w-full">
-
-//       {/* HERO SECTION */}
-//       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-//         <div className="max-w-6xl mx-auto px-6 py-24 text-center">
-//           <h1 className="text-5xl font-bold mb-6">
-//             your sods
-//           </h1>
-
-//         </div>
-//       </section>
-
-//       <section className="bg-gradient-to-r from-black-600 to-black-800 text-white">
-//         <div className="max-w-6xl mx-auto px-6 py-24 text-center">
-
-          
-
-//         </div>
-//       </section>
-
-
-
-//     </main>
-
-//   );
-// }
-
-
-
-
-// "use client";
-// import { useState } from "react";
-
-// export default function Page() {
-//   const [pickup, setPickup] = useState("");
-//   const [drop, setDrop] = useState("");
-//   const [date, setDate] = useState("");
-//   const [time, setTime] = useState("");
-
-//   const handleSubmit = () => {
-//     alert(`Cab booked from ${pickup} to ${drop} on ${date} at ${time}`);
-//   };
-
-//   return (
-//     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
-//       <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-6">
-//         <h1 className="text-2xl font-bold mb-6 text-center">Book Your Cab</h1>
-
-//         <div className="space-y-4">
-//           <input
-//             placeholder="Pickup Location"
-//             value={pickup}
-//             onChange={(e) => setPickup(e.target.value)}
-//             className="w-full p-3 border rounded-xl"
-//           />
-//           <input
-//             placeholder="Drop Location"
-//             value={drop}
-//             onChange={(e) => setDrop(e.target.value)}
-//             className="w-full p-3 border rounded-xl"
-//           />
-//           <input
-//             type="date"
-//             value={date}
-//             onChange={(e) => setDate(e.target.value)}
-//             className="w-full p-3 border rounded-xl"
-//           />
-//           <input
-//             type="time"
-//             value={time}
-//             onChange={(e) => setTime(e.target.value)}
-//             className="w-full p-3 border rounded-xl"
-//           />
-//           <button
-//             onClick={handleSubmit}
-//             className="w-full bg-blue-600 text-white p-3 rounded-xl text-lg hover:bg-blue-700 transition"
-//           >
-//             Book Now
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
