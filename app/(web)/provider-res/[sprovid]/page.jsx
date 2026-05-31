@@ -1761,18 +1761,16 @@ export default function ProviderKioskPage() {
 
                       <input
                         type="radio"
-                        name="ordrType"
-                        value="dining"
-                        checked={
-                          ordrType === "dining"
-                        }
+                       name="ordrType"
+                        value="At home"
+                        checked={ordrType === "At home"}
                         onChange={(e) =>
                           setOrderType(e.target.value)
                         }
                         className="hidden"
                       />
 
-                      <span>Dining</span>
+                      <span>At Home</span>
                     </label>
 
                     {/* ONLINE */}
@@ -1782,20 +1780,20 @@ export default function ProviderKioskPage() {
                       <input
                         type="radio"
                         name="ordrType"
-                        value="packaging"
-                        checked={ordrType === "packaging"}
+                        value="At shop"
+                        checked={ordrType === "At shop"}
                         onChange={(e) =>
                           setOrderType(e.target.value)
                         }
                         className="hidden"
                       />
 
-                      <span>Packaging</span>
+                      <span>At Shop</span>
                     </label>
                   </div>
                 </div>
 
-                <p>{tableSystemTake && ordrType === "dining" ? (<>
+                <p>{tableSystemTake && ordrType === "At shop" ? (<>
                 <div className="mb-4">
 
                   <label className="block text-sm font-medium mb-2">
