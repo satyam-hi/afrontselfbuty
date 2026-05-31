@@ -27,15 +27,15 @@ export default function Footer(){
                       </h2>
     
                       <p className="text-sm text-orange-300">
-                        Restaurant SaaS Platform
+                        Smart Beauty & Salon SaaS Platform
                       </p>
                     </div>
     
                   </div>
     
                   <p className="text-gray-400 mt-6 leading-7">
-                    Smart self-ordering kiosk and restaurant management platform
-                    for restaurants, cafés, hotels and food courts.
+                    Smart self-ordering kiosk and beauty salon management platform
+                    for beauty salons, spas and wellness centers.
                   </p>
     
                   {/* SOCIAL */}
