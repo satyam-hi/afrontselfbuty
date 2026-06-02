@@ -3,9 +3,11 @@
 // window.Razorpay
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export default function ProviderKioskPage() {
   const { sprovid } = useParams();
+    const searchParams = useSearchParams();
 
   const BASE_URL = process.env.NEXT_PUBLIC_BACKEN_BASE_URL;
 
@@ -51,6 +53,14 @@ export default function ProviderKioskPage() {
 
 
   const LIMIT = 15;
+
+      useEffect(() => {
+    const tbn = searchParams.get("tbn");
+
+    if (tbn) {
+      setTableNumber(Number(tbn));
+    }
+  }, [searchParams]);
 
   // razore pay script==========================
 
@@ -704,6 +714,19 @@ export default function ProviderKioskPage() {
   // =========================================================
   // UI
   // =========================================================
+
+    const canAccess =
+  provider?.status === "active" &&
+  provider?.subscription?.status === "active" &&
+  new Date(provider?.subscription?.nextBillingDate) > new Date();
+
+if (!canAccess) {
+  return (
+    <div>
+      <h1>Provider subscription has expired</h1>
+    </div>
+  );
+}
 
   // console.log("provider",provider)
   // if(provider?.status !="active"){

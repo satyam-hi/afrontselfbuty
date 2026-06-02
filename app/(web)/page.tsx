@@ -43,7 +43,7 @@ export default function HomePage() {
     },
     {
       name: "Online with Offline",
-      price: "4% of total booking amount",
+      price: "₹499/month",
     },
   ];
 

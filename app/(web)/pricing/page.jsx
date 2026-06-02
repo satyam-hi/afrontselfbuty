@@ -8,7 +8,7 @@ export default function Pricing() {
         },
         {
             name: "Online with offline",
-            price: "4% of total order amount",
+            price: "₹499/month",
         },]
     return (<>
         <section className="py-28 px-6">
