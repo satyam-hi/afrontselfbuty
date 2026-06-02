@@ -80,6 +80,15 @@ export default function ProviderDashboardHome() {
           </Link>
 
         </div>
+        
+          <Link href="/admin/provider-subscription-buy">
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-2xl shadow hover:shadow-lg cursor-pointer transition text-white">
+              <h3 className="text-xl font-semibold mb-2">🚀 Buy Subscription</h3>
+              <p className="text-blue-100 text-sm">
+                Upgrade your account with a paid monthly subscription plan.
+              </p>
+            </div>
+          </Link>
 
         {/* RECENT PRODUCTS */}
         {/* <div className="bg-white rounded-2xl shadow mb-12">
