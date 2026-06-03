@@ -35,7 +35,7 @@ export default function ProviderKioskPage() {
   const [successToken, setSuccessToken] = useState(null);
   const [gstTake, setGstTake] = useState(false);
   const [tableSystemTake, setTableSystemTake] = useState(false);
-    const [ordrType, setOrderType] = useState("dining");
+    const [ordrType, setOrderType] = useState("At shop");
     const [tableNumber, setTableNumber] = useState(0);
   // const [tableSystemTake, setTableSystemTake] = useState(false);
   //   const [ordrType, setOrderType] = useState("dining");
