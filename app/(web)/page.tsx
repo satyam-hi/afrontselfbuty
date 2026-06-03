@@ -38,12 +38,12 @@ export default function HomePage() {
 
   const pricing = [
     {
-      name: "Only Offline",
+      name: "Free Trial",
       price: "Free",
     },
     {
       name: "Online with Offline",
-      price: "₹499/month",
+      price: "₹444/month",
     },
   ];
 

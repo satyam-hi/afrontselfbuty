@@ -3,12 +3,12 @@ import  Footer from "@/app/component/web/footer"
 export default function Pricing() {
     const pricing = [
         {
-            name: "Only offline",
+            name: "Free Trial",
             price: "free",
         },
         {
             name: "Online with offline",
-            price: "₹499/month",
+            price: "₹444/month",
         },]
     return (<>
         <section className="py-28 px-6">

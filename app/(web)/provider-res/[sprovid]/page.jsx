@@ -717,7 +717,7 @@ export default function ProviderKioskPage() {
 
     const canAccess =
   provider?.status === "active" &&
-  provider?.subscription?.status === "active" &&
+  // provider?.subscription?.status === "active" &&
   new Date(provider?.subscription?.nextBillingDate) > new Date();
 
 if (!canAccess) {
