@@ -21,9 +21,9 @@ export default async function AdminLayout({
     cache: "no-store",
   });
 
-  // if (!res.ok) {
-  //   redirect("/"); 
-  // }
+  if (!res.ok) {
+    redirect("/"); 
+  }
 
   return (
     <main>
