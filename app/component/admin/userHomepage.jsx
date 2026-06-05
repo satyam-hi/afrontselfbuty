@@ -71,7 +71,7 @@ export default function UserDashboardHome({ id } ) {
         </div>
 
         {/* STATS */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+        {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-12">
 
           <div className="bg-white p-6 rounded-2xl shadow">
             <p className="text-gray-500 text-sm">Total Orders</p>
@@ -93,7 +93,7 @@ export default function UserDashboardHome({ id } ) {
             <h3 className="text-3xl font-bold mt-2 text-yellow-500">2</h3>
           </div>
 
-        </div>
+        </div> */}
 
         {/* ACTION */}
         <div className="bg-blue-600 text-white p-10 rounded-2xl mb-12 flex flex-col md:flex-row justify-between items-center gap-6">

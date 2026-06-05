@@ -294,12 +294,16 @@ export default function Provider() {
 
                                     <div className="space-y-1">
 
-                                        <p className="text-sm text-gray-600 break-all">
+                                        {/* <p className="text-sm text-gray-600 break-all">
                                             📧 {provider.email}
-                                        </p>
+                                        </p> */}
+
 
                                         <p className="text-sm text-gray-600">
                                             📱 {provider.mobile}
+                                        </p>
+                                          <p className="text-sm text-gray-600 break-all">
+                                         {provider?.additionalDetails?.additionalDescription?.value}
                                         </p>
 
                                     </div>

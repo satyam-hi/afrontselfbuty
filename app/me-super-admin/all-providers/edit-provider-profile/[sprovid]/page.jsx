@@ -38,6 +38,9 @@ export default function EditProviderProfile() {
                 accept: false,
                 percent: 0,
             },
+               paymentType: {
+                value:""
+            }
         },
     });
 
@@ -153,6 +156,9 @@ export default function EditProviderProfile() {
                     percent:
                         provider.additionalDetails?.gst?.percent || 0,
                 },
+                     paymentType: {
+                value:provider.additionalDetails?.paymentType?.value || "online"
+            }
             },
         });
     }, [provider]);
@@ -254,6 +260,27 @@ export default function EditProviderProfile() {
                     ),
             },
         }));
+    };
+
+
+
+    
+    // chancge paymentType=======================
+
+       const handlepaymentTypeChange = (e) => {
+        const { name, value } = e.target;
+
+            setForm((prev) => ({
+            ...prev,
+            additionalDetails: {
+                ...prev.additionalDetails,
+                paymentType:{
+                    value:value
+                },
+            },
+        }));
+        
+
     };
 
     // =========================================================
@@ -543,6 +570,24 @@ export default function EditProviderProfile() {
                     )}
                 </div>
             </div>
+
+
+                        {/*  select payment type */}
+
+
+            <select
+                name="paymenttype"
+                value={form.additionalDetails.paymentType.value}
+                onChange={handlepaymentTypeChange}
+                className="border p-2 w-full mb-3 rounded"
+            >
+                <option value="both">Both</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+            </select>
+
+
+
 
             {/* SUBMIT */}
             <button

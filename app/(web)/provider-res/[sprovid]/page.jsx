@@ -49,6 +49,7 @@ export default function ProviderKioskPage() {
   const [queueOrders, setQueueOrders] = useState([]);
   const [queueLoading, setQueueLoading] = useState(false);
   const [trackOrder, setTrackOrder] = useState(true);
+  const [paymentMethodType, setPaymentMethodType] = useState("both");
 
 
 
@@ -119,6 +120,14 @@ export default function ProviderKioskPage() {
 
         if (data.success) {
           setProvider(data.provider);
+                setPaymentMethodType(data.provider?.additionalDetails?.paymentType?.value)
+          const paymentType =
+            data.provider?.additionalDetails?.paymentType?.value;
+          setPaymentMethod(
+            paymentType === "offline"
+              ? "pay_at_counter"
+              : "online"
+          );
 
         }
       } catch (err) {
@@ -1600,8 +1609,47 @@ if (!canAccess) {
                     <label className="block text-sm font-medium mb-2">
                       Payment Method
                     </label>
+                     <div className="grid grid-cols-1 gap-3">
 
-                    <div className="grid grid-cols-1 gap-3">
+                      {(paymentMethodType === "offline" ||
+                        paymentMethodType === "both") && (
+                          <label className="border rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:border-blue-500">
+
+                            <input
+                              type="radio"
+                              name="paymentMethod"
+                              value="pay_at_counter"
+                              checked={paymentMethod === "pay_at_counter"}
+                              onChange={(e) => setPaymentMethod(e.target.value)}
+                            />
+
+                            <span className="font-medium">
+                              Pay At Counter
+                            </span>
+                          </label>
+                        )}
+
+                      {(paymentMethodType === "online" ||
+                        paymentMethodType === "both") && (
+                          <label className="border rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:border-blue-500">
+
+                            <input
+                              type="radio"
+                              name="paymentMethod"
+                              value="online"
+                              checked={paymentMethod === "online"}
+                              onChange={(e) => setPaymentMethod(e.target.value)}
+                            />
+
+                            <span className="font-medium">
+                              Pay Online
+                            </span>
+                          </label>
+                        )}
+
+                    </div>
+
+                    {/* <div className="grid grid-cols-1 gap-3">
 
                       <label className="border rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:border-blue-500">
 
@@ -1638,7 +1686,7 @@ if (!canAccess) {
                           Pay Online
                         </span>
                       </label>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* BUTTON */}
@@ -1647,11 +1695,14 @@ if (!canAccess) {
                     onClick={placeOrder}
                     className="w-full bg-green-600 hover:bg-green-700 active:scale-[0.98] transition text-white py-4 rounded-2xl text-lg font-bold shadow"
                   >
-                    Place Order
+                    Place Order & Book
                   </button>
                 </div>
               </>
             )}
+               <p className="text-sm text-gray-600 break-all">
+              {provider?.additionalDetails?.additionalNote?.value}
+              </p>
           </div>
         </div>
 
@@ -1854,7 +1905,7 @@ if (!canAccess) {
                     <label className="block text-sm font-medium mb-2 text-green-700">
                    Payment Type : <span className="font-bold">{paymentMethod}</span>
                   </label>
-                    <div className="space-y-2">
+                    {/* <div className="space-y-2">
 
                       <label className="flex gap-2 items-center border p-3 rounded-xl">
                         <input
@@ -1880,6 +1931,47 @@ if (!canAccess) {
                         Pay Online
                       </label>
 
+                    </div> */}
+                      <div className="grid grid-cols-1 gap-3">
+
+                      {(paymentMethodType === "offline" ||
+                        paymentMethodType === "both") && (
+                          <label className="border rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:border-blue-500">
+
+                            <input
+                              type="radio"
+                              name="paymentMethod"
+                              value="pay_at_counter"
+                              checked={paymentMethod === "pay_at_counter"}
+                              onChange={(e) => setPaymentMethod(e.target.value)}
+                              className="hidden"
+                            />
+
+                            <span className="font-medium">
+                              Pay At Counter
+                            </span>
+                          </label>
+                        )}
+
+                      {(paymentMethodType === "online" ||
+                        paymentMethodType === "both") && (
+                          <label className="border rounded-xl p-3 flex items-center gap-3 cursor-pointer hover:border-blue-500">
+
+                            <input
+                              type="radio"
+                              name="paymentMethod"
+                              value="online"
+                              checked={paymentMethod === "online"}
+                              onChange={(e) => setPaymentMethod(e.target.value)}
+                              className="hidden"
+                            />
+
+                            <span className="font-medium">
+                              Pay Online
+                            </span>
+                          </label>
+                        )}
+
                     </div>
 
                     {/* BUTTON */}
@@ -1890,7 +1982,7 @@ if (!canAccess) {
                       }}
                       className="w-full bg-green-600 text-white py-4 rounded-2xl font-bold"
                     >
-                      Place Order
+                      Place Order & Book
                     </button>
 
                   </div>
@@ -1898,7 +1990,10 @@ if (!canAccess) {
                   {/* ===== YOUR ORIGINAL CART CONTENT END ===== */}
                 </>
               )}
-
+              
+                 <p className="text-sm text-gray-600 break-all">
+              {provider?.additionalDetails?.additionalNote?.value}
+              </p>
             </div>
           </div>
         )}

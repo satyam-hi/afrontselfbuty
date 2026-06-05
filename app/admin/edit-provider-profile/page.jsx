@@ -30,6 +30,14 @@ export default function EditProviderProfile() {
             tableSystem: {
                 accept: false,
             },
+                        // NEW FIELDS
+            additionalNote: {
+                value: "",
+            },
+
+            additionalDescription: {
+                value: "",
+            },
         },
     });
 
@@ -93,6 +101,16 @@ export default function EditProviderProfile() {
                 tableSystem: {
                     accept:
                         provider.additionalDetails?.tableSystem?.accept || false,
+                },
+                 // NEW FIELDS
+                additionalNote: {
+                    value:
+                        provider.additionalDetails?.additionalNote?.value || "",
+                },
+
+                additionalDescription: {
+                    value:
+                        provider.additionalDetails?.additionalDescription?.value || "",
                 },
             },
         });
@@ -274,6 +292,61 @@ export default function EditProviderProfile() {
                     Table System
                 </label>
             </div>
+
+                        {/* ADDITIONAL NOTE */}
+            <div className="mb-3">
+
+                <label className="block mb-1 font-medium">
+                    Additional Note
+                </label>
+
+                <input
+                    type="text"
+                    className="border p-2 w-full"
+                    placeholder="Enter additional note"
+                    value={form.additionalDetails.additionalNote.value}
+                    onChange={(e) =>
+                        setForm({
+                            ...form,
+                            additionalDetails: {
+                                ...form.additionalDetails,
+                                additionalNote: {
+                                    ...form.additionalDetails.additionalNote,
+                                    value: e.target.value,
+                                },
+                            },
+                        })
+                    }
+                />
+            </div>
+
+            {/* ADDITIONAL DESCRIPTION */}
+            <div className="mb-3">
+
+                <label className="block mb-1 font-medium">
+                    Additional Description
+                </label>
+
+                <textarea
+                    className="border p-2 w-full"
+                    rows={4}
+                    placeholder="Enter additional description"
+                    value={form.additionalDetails.additionalDescription.value}
+                    onChange={(e) =>
+                        setForm({
+                            ...form,
+                            additionalDetails: {
+                                ...form.additionalDetails,
+                                additionalDescription: {
+                                    ...form.additionalDetails.additionalDescription,
+                                    value: e.target.value,
+                                },
+                            },
+                        })
+                    }
+                />
+            </div>
+
 
             {/* PRODUCT TYPES */}
             <div className="mb-3">
