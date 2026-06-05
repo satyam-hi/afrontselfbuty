@@ -76,6 +76,10 @@ export default function OrderDetailsPage() {
           <p className="text-gray-500 text-sm">
             Provider :  {order.sprovname}
           </p>
+          <p className="text-gray-500 text-sm">
+
+           Table no: {order.tableNumber}
+          </p>
 
           <p className="text-gray-500">
             {new Date(

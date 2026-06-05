@@ -342,7 +342,7 @@ export default function ProviderOrdersPage() {
                      <option>Accepted</option>
                     <option>Working</option>
                     <option>Skipped</option>
-                    <option>Ready</option>
+                    {/* <option>Ready</option> */}
                     <option>On The Way</option>
                     <option>Completed</option>
                     <option disabled={order.paymentMethod === 'online'? true : false}>Cancelled</option>

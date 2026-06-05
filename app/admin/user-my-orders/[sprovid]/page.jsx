@@ -317,13 +317,22 @@ useEffect(() => {
                     <p className="text-sm text-gray-600">
                       {order.customerMobile}
                     </p>
-                    <p className="text-sm text-gray-500">
+                    {/* <p className="text-sm text-gray-500">
                       Settle date:
                       {new Date(order.settleDate).toLocaleString()}
                     </p>
                     <p className="text-sm text-gray-500">
                        Settle Status:
                       {order.settleStatus}
+                    </p> */}
+                    <p className="text-sm text-gray-600">
+                      Payment Method: {order.paymentMethod}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Order type: {order.ordrType}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Table no: {order.tableNumber}
                     </p>
                   </div>
 
@@ -354,9 +363,18 @@ useEffect(() => {
                     }
                     className="border p-2 rounded"
                   >
-                    <option>Pending</option>
+                    {/* <option>Pending</option>
                     <option>Working</option>
-                    <option>Ready</option>
+                    <option>Ready</option> */}
+                    <option>Pending</option>
+                     <option>Accepted</option>
+                    <option>Working</option>
+                    <option>Skipped</option>
+                    {/* <option>Ready</option> */}
+                    <option>On The Way</option>
+                    <option  >Completed</option>
+                    <option disabled={true}>Cancelled</option>
+
                   </select>
 
                   <select
