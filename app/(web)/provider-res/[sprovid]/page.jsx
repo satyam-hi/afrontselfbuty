@@ -732,7 +732,7 @@ export default function ProviderKioskPage() {
 if (!canAccess) {
   return (
     <div>
-      <h1>Provider subscription has expired</h1>
+      <h1>Loading , please wait ...</h1>
     </div>
   );
 }
