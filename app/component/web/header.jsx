@@ -30,7 +30,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto flex justify-between items-center">
 
         {/* LOGO */}
-        <Link href="/" className="text-xl font-bold">
+        <Link href="https://kiosk-cloud-sage.vercel.app/" className="text-xl font-bold">
           Kiosk Cloud
         </Link>
 
