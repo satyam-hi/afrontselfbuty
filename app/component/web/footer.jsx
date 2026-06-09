@@ -164,6 +164,10 @@ export default function Footer(){
                     >
                       Contact Us
                     </Link>
+
+                     <a href="https://images-eight-weld.vercel.app/" target="_blank" rel="noopener noreferrer"  className="text-gray-400 hover:text-orange-400 transition">
+                      Generate QR Code
+                    </a>
     
                   </div>
     
